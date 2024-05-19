@@ -10,13 +10,32 @@ function processArray(arr) {
     return newArray;
   }
 
+// task 2 
+// An array from task two is passed on here and it corresponds to the strind array here 
+// odd becomes lowercase and even becomes uppercase
 
-  // Sample array of numbers
-const numbers = [1, 4, 3, 6, 8, 2];
+ function formatArrayStrings(strArray, numArray) {
+    const formattedArr = [];
+    for (let i = 0; i < strArray  .length; i++) {
+      if (numArray[i] % 2 === 0) {
+        formattedArr.push(strArray[i].toUpperCase());
+      } else {
+        formattedArr.push(strArray[i].toLowerCase());
+      }
+    }
+    return formattedArr;
+  }
+  
+  // Sample array of strings
+  const strings = ["Hello", "world", "how", "are", "you?"];
+  
+  // Process the original array of numbers
+  const processedNumbers = processArray([1, 4, 3, 2, 5]);
 
-// Process the array
-const processedNumbers = processArray(numbers);
 
-console.log("Original Array:", numbers);
-console.log("Processed Array:", processedNumbers);
+  // Format the strings based on processed numbers
+const formattedStrings = formatArrayStrings(strings, processedNumbers);
+
+console.log("Original Strings:", strings);
+console.log("Formatted Strings:", formattedStrings);
   
